@@ -1,0 +1,125 @@
+$dark: #1e293b;
+$white: #ffffff;
+$primary: #3b82f6;
+$light-forms-border: #cbd5e1;
+
+.header {
+  .container {
+    margin: 0 auto;
+    width: 1296px;
+    // border: 1px solid;
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    height: 52px;
+    background-color: $dark;
+
+    &__inner {
+      display: flex;
+      justify-content: end;
+    }
+
+    &__row {
+      display: flex;
+      gap: 24px;
+    }
+
+    &__enter-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      img {
+        margin-right: 8px;
+      }
+      span {
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+      }
+    }
+
+    &__add-btn {
+      display: flex;
+      align-items: center;
+      padding: 6px 12px;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      color: $white;
+      background-color: $primary;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    height: 84px;
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__title {
+      span {
+        font-family: "Inter", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+
+    &__categories {
+      button {
+        width: 152px;
+        height: 36px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        border: 1px solid $primary;
+        color: $primary;
+        background-color: $white;
+        border-radius: 4px;
+      }
+      img {
+        padding-left: 12px;
+      }
+      span {
+        padding: 8px 12px 8px 8px;
+      }
+    }
+
+    &__search {
+      display: flex;
+      width: 824px;
+
+      input {
+        width: 734px;
+        height: 36px;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0px 12px;
+        border: 1px solid $light-forms-border;
+        border-radius: 4px;
+      }
+      button {
+        width: 91px;
+        height: 36px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        background-color: $primary;
+        border-radius: 0px 4px 4px 0px;
+        border: none;
+        color: $white;
+      }
+    }
+  }
+}
