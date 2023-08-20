@@ -5,16 +5,15 @@ $light-forms-border: #cbd5e1;
 
 $breakpoint_xl: 1278px;
 $breakpoint_l: 1161px;
-$breakpoint_m: 961px;
-$breakpoint_s: 811px;
-$breakpoint_xs: 716px;
-$breakpoint_xxs: 580px;
+$breakpoint_m: 980px;
+$breakpoint_s: 880px;
+$breakpoint_xs: 780px;
+$breakpoint_xxs: 680px;
 
 .header {
   .container {
     margin: 0 auto;
     width: 1296px;
-    border: 1px solid red;
   }
 
   &-top {
@@ -73,29 +72,29 @@ $breakpoint_xxs: 580px;
     &__inner {
       display: flex;
       align-items: center;
+      gap: 24px;
       justify-content: space-between;
     }
 
     &__title-wrapper {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      align-items: flex-end;
     }
 
     &__title {
-      span {
+      h3 {
         font-family: "Inter", sans-serif;
-        font-size: 30px;
+        font-size: 27px;
         font-weight: 700;
       }
     }
 
     &__categories {
-      .header-bottom__categories-icon {
+      margin-right: 12px;
+      &-icon {
         display: none;
       }
-      button {
+      &-btn {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -113,9 +112,10 @@ $breakpoint_xxs: 580px;
 
     &__search {
       display: flex;
+      align-items: center;
       justify-content: flex-end;
 
-      input {
+      &-input {
         width: 734px;
         height: 36px;
         font-family: Inter;
@@ -126,7 +126,7 @@ $breakpoint_xxs: 580px;
         border-radius: 4px;
       }
 
-      button {
+      &-btn {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -144,35 +144,31 @@ $breakpoint_xxs: 580px;
 
 @media (max-width: $breakpoint_xl) {
   .header-bottom__search {
-    width: 700px;
-
-    input {
-      width: 650px;
-    }
+    width: 800px;
   }
 }
 
 @media (max-width: $breakpoint_l) {
   .header-bottom__search {
-    width: 500px;
+    width: 700px;
   }
 }
 
 @media (max-width: $breakpoint_m) {
   .header-bottom__search {
-    width: 350px;
+    width: 600px;
   }
 }
 
 @media (max-width: $breakpoint_s) {
+  .header-bottom__search {
+    width: 500px;
+  }
+
   .header-bottom__title {
     span {
       font-size: 25px;
     }
-  }
-
-  .header-bottom__search {
-    width: 250px;
   }
 }
 
@@ -186,7 +182,7 @@ $breakpoint_xxs: 580px;
     }
   }
   .header-bottom__search {
-    width: 250px;
+    width: 400px;
   }
 }
 
@@ -196,7 +192,7 @@ $breakpoint_xxs: 580px;
   }
   .header-bottom__inner {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
   .header-bottom__title {
     display: none;
