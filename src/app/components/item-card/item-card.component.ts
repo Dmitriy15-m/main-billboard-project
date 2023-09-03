@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { IItemCard } from 'src/app/models/item-card';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-card',
   templateUrl: './item-card.component.html',
-  styleUrls: ['./item-card.component.scss']
+  styleUrls: ['./item-card.component.scss'],
 })
 export class ItemCardComponent {
+  @Input() item!: IItemCard;
+  imageUrl!: string;
 
+  ngOnInit(): void {
+   this.imageUrl = this.item.img
+  }
 }

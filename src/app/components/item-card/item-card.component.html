@@ -1,13 +1,14 @@
-<div class="item-card">
-  <img
-    class="item-card__img"
-    src="../../../assets/img/item-card/Картинка.png"
-    alt=""
-  />
-  <div class="item-card__info">
-    <span class="item-card__title">Гитара Fender</span>
-    <span class="item-card__price">15 700 ₽</span>
-    <span class="item-card__location">Москва, Ленинский проспект</span>
-    <span class="item-card__visit-time">Сегодня 09:45</span>
-  </div>
-</div>
+<li class="item-card">
+  <a class="item-card__btn-link" href="">
+    <div class="item-card__img-wrap">
+      <div [style.backgroundImage]="'url(' + imageUrl + ')'"class="item-card__img"></div>
+    </div>
+    <div class="item-card__info">
+      <p class="item-card__title">{{item.title}}</p>
+      <p class="item-card__price">{{item.price}}</p>
+      <p class="item-card__location">{{item.location}}</p>
+      <p class="item-card__visit-time">{{item.visitTime}}</p>
+    </div>
+  </a>
+</li>
+
