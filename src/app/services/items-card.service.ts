@@ -11,7 +11,7 @@ export class ItemsCardService {
   constructor(private http: HttpClient, private errService: ErrorService) {}
 
   getData(): Observable<IItemsList> {
-    return this.http.get<IItemsList>('assets/data/items.json4').pipe(
+    return this.http.get<IItemsList>('assets/data/items.json').pipe(
       delay(2000),
       catchError((err: HttpErrorResponse) => {
         this.errService.sendErrorMessage(err.message);
