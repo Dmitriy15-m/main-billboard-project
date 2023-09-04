@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ItemsCardService } from '../../services/items-card.service';
 import { IItemsList } from 'src/app/models/item-card';
-import { Observable, Subscription, tap } from 'rxjs';
+import { Observable, tap, catchError, throwError, delay, timer } from 'rxjs';
+import { ErrorService } from 'src/app/services/error.service';
 
 @Component({
   selector: 'app-items-page',
@@ -9,14 +10,29 @@ import { Observable, Subscription, tap } from 'rxjs';
   styleUrls: ['./items-page.component.scss'],
 })
 export class ItemsPageComponent implements OnInit {
-  constructor(public itemCardsService: ItemsCardService) {}
+  constructor(
+    public itemCardsService: ItemsCardService,
+    public errService: ErrorService
+  ) {}
 
+  showOffer = false;
   isLoading = true;
-  itemList$!: Observable<IItemsList>;
+  itemList$!: Observable<0 | IItemsList>;
 
   ngOnInit(): void {
     this.itemList$ = this.itemCardsService.getData().pipe(
-      tap(() => this.isLoading = false)
+      tap(() => {
+        this.isLoading = false;
+        this.showOffer = true;
+      }),
+      catchError(() => {
+        return timer(2000).pipe(
+          tap(() => {
+            this.isLoading = false;
+            this.showOffer = false;
+          })
+        );
+      })
     );
   }
 }

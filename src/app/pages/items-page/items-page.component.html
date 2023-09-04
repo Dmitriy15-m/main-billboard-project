@@ -1,11 +1,17 @@
 <main>
-  <p class="offer-title" *ngIf="!isLoading">Рекомендации для вас</p>
+  <p class="offer-title" *ngIf="showOffer">Рекомендации для вас</p>
   <p class="loading-title" *ngIf="isLoading">Загрузка.. .</p>
+
+  <app-error
+  *ngIf="errService.errMessage$ | async as err"
+  [err]="err"
+></app-error>
 
   <div class="container">
     <ul *ngIf="itemList$ | async as itemsList" class="items-list">
       <app-item-card
-        *ngFor="let item of itemsList['main-page']" [item]="item"
+        *ngFor="let item of itemsList['main-page']"
+        [item]="item"
       ></app-item-card>
     </ul>
   </div>
