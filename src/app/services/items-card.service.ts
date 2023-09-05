@@ -5,11 +5,8 @@ import {
   Observable,
   catchError,
   delay,
-  of,
-  throwError,
   timer,
   tap,
-  switchMap,
 } from 'rxjs';
 import { ErrorService } from './error.service';
 
@@ -20,7 +17,7 @@ export class ItemsCardService {
   constructor(private http: HttpClient, private errService: ErrorService) {}
 
   getData(): Observable<0 | IItemsList> {
-    return this.http.get<IItemsList>('assets/data/items.json4').pipe(
+    return this.http.get<IItemsList>('assets/data/items.json').pipe(
       delay(2000),
       catchError((err: HttpErrorResponse) => {
         return timer(2000).pipe(

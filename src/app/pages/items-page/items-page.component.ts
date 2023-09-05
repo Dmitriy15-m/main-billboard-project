@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ItemsCardService } from '../../services/items-card.service';
 import { IItemsList } from 'src/app/models/item-card';
-import { Observable, tap, catchError, throwError, delay, timer } from 'rxjs';
+import { Observable, tap} from 'rxjs';
 import { ErrorService } from 'src/app/services/error.service';
 
 @Component({
