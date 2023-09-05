@@ -1,13 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { IItemsList } from '../models/item-card';
-import {
-  Observable,
-  catchError,
-  delay,
-  timer,
-  tap,
-} from 'rxjs';
+import { Observable, catchError, delay, timer, tap } from 'rxjs';
 import { ErrorService } from './error.service';
 
 @Injectable({

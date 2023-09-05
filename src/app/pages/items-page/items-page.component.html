@@ -3,9 +3,9 @@
   <p class="loading-title" *ngIf="isLoading">Загрузка.. .</p>
 
   <app-error
-  *ngIf="errService.errMessage$ | async as err"
-  [err]="err"
-></app-error>
+    *ngIf="errService.errMessage$ | async as err"
+    [err]="err"
+  ></app-error>
 
   <div class="container">
     <ul *ngIf="itemList$ | async as itemsList" class="items-list">

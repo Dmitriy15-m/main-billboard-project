@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ItemsCardService } from '../../services/items-card.service';
 import { IItemsList } from 'src/app/models/item-card';
-import { Observable, tap} from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { ErrorService } from 'src/app/services/error.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class ItemsPageComponent implements OnInit {
   ) {}
 
   isLoading = true;
-  itemList$!: Observable<0 |IItemsList>;
+  itemList$!: Observable<0 | IItemsList>;
 
   ngOnInit(): void {
     this.itemList$ = this.itemCardsService.getData().pipe(

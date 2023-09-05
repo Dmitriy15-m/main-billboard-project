@@ -1,7 +1,8 @@
 main {
-  margin: 5px 5px 80px 5px;
+  margin-bottom: 80px;
 
-  .offer-title, .loading-title {
+  .offer-title,
+  .loading-title {
     margin-top: 32px;
     margin-bottom: 24px;
     text-align: center;
@@ -31,7 +32,6 @@ main {
     font-size: 20px;
   }
 }
-
 @media (max-width: 1151px) {
   main .items-list {
     justify-content: center;
