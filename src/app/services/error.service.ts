@@ -7,15 +7,14 @@ import { Subject } from 'rxjs';
 export class ErrorService {
   constructor() {}
 
-  errMessage$ = new Subject<string>();
+  private errMessage = new Subject<string>();
+  public errMessage$ = this.errMessage.asObservable();
 
   sendErrorMessage(err: string) {
-    setTimeout(() => {
-      this.errMessage$.next(err);
-    }, 2000);
+    this.errMessage.next(err);
   }
 
   clearErrMessage() {
-    this.errMessage$.next('');
+    this.errMessage.next('');
   }
 }

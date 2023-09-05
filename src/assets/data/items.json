@@ -8,11 +8,11 @@
       "visitTime": "Сегодня 15:43"
     },
     {
-      "img": "../../../assets/img/main-page/molotok.png",
-      "title": "Молоток стальной",
-      "price": "3 900₽",
-      "location": "Феодосия, Хозяйственная 1",
-      "visitTime": "Сегодня 09:46"
+      "img": "../../../assets/img/main-page/popugay.png",
+      "title": "Попугай Жако",
+      "price": "9 700₽",
+      "location": "Ялта, Набережная 6",
+      "visitTime": "Вчера 10:45"
     },
     {
       "img": "../../../assets/img/main-page/dom.png",
@@ -71,18 +71,18 @@
       "visitTime": "Сегодня 09:01"
     },
     {
-      "img":"../../../assets/img/main-page/raketka.png",
+      "img": "../../../assets/img/main-page/raketka.png",
       "title": "Теннисная ракетка",
       "price": "17 200₽",
       "location": "Сочи, Спортивный-стадион 123",
       "visitTime": "Сегодня 23:05"
     },
     {
-      "img": "../../../assets/img/main-page/popugay.png",
-      "title": "Попугай Жако",
-      "price": "9 700₽",
-      "location": "Ялта, Набережная 6",
-      "visitTime": "Вчера 10:45"
+      "img": "../../../assets/img/main-page/molotok.png",
+      "title": "Молоток стальной",
+      "price": "3 900₽",
+      "location": "Феодосия, Хозяйственная 1",
+      "visitTime": "Сегодня 09:46"
     }
   ]
 }

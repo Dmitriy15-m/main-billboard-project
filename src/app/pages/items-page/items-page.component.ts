@@ -15,23 +15,13 @@ export class ItemsPageComponent implements OnInit {
     public errService: ErrorService
   ) {}
 
-  showOffer = false;
   isLoading = true;
-  itemList$!: Observable<0 | IItemsList>;
+  itemList$!: Observable<0 |IItemsList>;
 
   ngOnInit(): void {
     this.itemList$ = this.itemCardsService.getData().pipe(
       tap(() => {
         this.isLoading = false;
-        this.showOffer = true;
-      }),
-      catchError(() => {
-        return timer(2000).pipe(
-          tap(() => {
-            this.isLoading = false;
-            this.showOffer = false;
-          })
-        );
       })
     );
   }

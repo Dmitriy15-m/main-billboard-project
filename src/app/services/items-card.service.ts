@@ -1,7 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { IItemsList } from '../models/item-card';
-import { Observable, catchError, delay, of, throwError } from 'rxjs';
+import {
+  Observable,
+  catchError,
+  delay,
+  of,
+  throwError,
+  timer,
+  tap,
+  switchMap,
+} from 'rxjs';
 import { ErrorService } from './error.service';
 
 @Injectable({
@@ -10,13 +19,14 @@ import { ErrorService } from './error.service';
 export class ItemsCardService {
   constructor(private http: HttpClient, private errService: ErrorService) {}
 
-  getData(): Observable<IItemsList> {
-    return this.http.get<IItemsList>('assets/data/items.json').pipe(
+  getData(): Observable<0 | IItemsList> {
+    return this.http.get<IItemsList>('assets/data/items.json4').pipe(
       delay(2000),
       catchError((err: HttpErrorResponse) => {
-        this.errService.sendErrorMessage(err.message);
-        return throwError(() =>
-          console.log(`Произошла ошибка загрузки данных ${err.message}`)
+        return timer(2000).pipe(
+          tap(() => {
+            this.errService.sendErrorMessage(err.message);
+          })
         );
       })
     );
