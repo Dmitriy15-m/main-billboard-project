@@ -4,12 +4,8 @@ $white: #ffffff;
 $primary: #3b82f6;
 $light-forms-border: #cbd5e1;
 
-$breakpoint_xl: 1200px;
-$breakpoint_l: 992px;
-$breakpoint_m: 768px;
-$breakpoint_s: 576px;
-
 header {
+  font-family: "Inter", sans-serif;
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -28,7 +24,7 @@ header {
   &__row {
     display: flex;
     gap: 24px;
-    margin-right: 5px;
+    margin-right: 20px;
   }
 
   &__login-button {
@@ -53,7 +49,6 @@ header {
 
     li {
       margin: 0 8px;
-      font-family: 'Inter', sans-serif;
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -109,11 +104,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 5px;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   &__title {
-    font-family: 'Inter', sans-serif;
+    margin: 0 0 0 20px;
     font-size: 30px;
     font-weight: 700;
   }
@@ -121,6 +117,8 @@ header {
   &__form {
     display: flex;
     align-items: center;
+    width: 900px;
+    margin-right: 20px;
   }
 
   &__categories {
@@ -138,7 +136,6 @@ header {
     width: 152px;
     height: 36px;
     padding: 8px 12px;
-    font-family: 'Inter', sans-serif;
     font-size: 14px;
     color: $primary;
     background-color: $white;
@@ -147,10 +144,14 @@ header {
     cursor: pointer;
   }
 
+  &__search {
+    display: flex;
+    flex-grow: 1;
+  }
+
   &__search-input {
-    width: 645px;
+    flex-grow: 1;
     height: 36px;
-    font-family: Inter;
     font-size: 14px;
     font-weight: 400;
     padding: 0px 12px;
@@ -177,7 +178,6 @@ header {
 .header-top__login-button,
 .header-top__new-ad-btn,
 .header-bottom__search-btn {
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: $white;
   cursor: pointer;
@@ -189,45 +189,21 @@ header {
   margin: 0 auto;
 }
 
-@media (max-width: $breakpoint_xl) {
-  .header-bottom__form {
-    width: 650px;
-  }
-}
-
-@media (max-width: $breakpoint_l) {
-  .header-bottom__form {
-    width: 470px;
-  }
-}
-
-@media (max-width: $breakpoint_m) {
-  .header-bottom__title {
-    font-size: 25px;
-  }
-  .header-bottom__form {
-    width: 330px;
-  }
-  .header-bottom__categories {
-    .header-bottom__categories-icon {
-      display: flex;
-      cursor: pointer;
-    }
-    .header-bottom__categories-btn {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: $breakpoint_s) {
-  .header-top__inner {
-    justify-content: center;
+@media (max-width: 1235px) {
+  header {
+    padding-bottom: 15px;
   }
   .header-bottom__inner {
-    flex-wrap: wrap;
     justify-content: center;
   }
-  .header-bottom__title {
+}
+
+@media (max-width: 500px) {
+  .header-bottom__categories-icon {
+    margin-left: 15px;
+    display: block;
+  }
+  .header-bottom__categories-btn {
     display: none;
   }
 }
