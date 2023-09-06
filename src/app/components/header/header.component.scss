@@ -121,9 +121,10 @@ header {
     margin-right: 20px;
   }
 
-  &__categories {
-    margin-right: 12px;
-  }
+  // &__categories {
+  //   border: 1px solid red;
+  //   margin: 0 12px;
+  // }
 
   &__categories-icon {
     display: none;
@@ -135,6 +136,7 @@ header {
     justify-content: space-between;
     width: 152px;
     height: 36px;
+    margin: 0 12px;
     padding: 8px 12px;
     font-size: 14px;
     color: $primary;
@@ -199,8 +201,11 @@ header {
 }
 
 @media (max-width: 500px) {
+  .header-bottom__title {
+    font-size: 24px;
+  }
   .header-bottom__categories-icon {
-    margin-left: 15px;
+    margin: 0 15px;
     display: block;
   }
   .header-bottom__categories-btn {
