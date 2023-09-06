@@ -7,6 +7,7 @@ import { ItemCardComponent } from './components/item-card/item-card.component';
 import { ItemsPageComponent } from './pages/items-page/items-page.component';
 import { ErrorComponent } from './components/error/error.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ItemCardPageComponent } from './pages/item-card-page/item-card-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     ItemCardComponent,
     ItemsPageComponent,
-    ErrorComponent
+    ErrorComponent,
+    ItemCardPageComponent
   ],
   imports: [
     BrowserModule,

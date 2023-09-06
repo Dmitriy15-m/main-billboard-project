@@ -19,10 +19,7 @@ $secondary-text: #64748b;
 
   &__img {
     height: 240px;
-    background-repeat: no-repeat;
-    background-position: center;
     border-radius: 10px 10px 0 0;
-    background-size: cover;
 
     &:hover {
       transition-duration: 0.2s;

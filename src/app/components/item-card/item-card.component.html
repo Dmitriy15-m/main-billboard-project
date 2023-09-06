@@ -1,7 +1,8 @@
 <li class="item-card">
-  <a class="item-card__btn-link" href="">
+  <a class="item-card__btn-link" routerLink="/item-card-page">
     <div class="item-card__img-wrap">
-      <div [style.backgroundImage]="'url(' + imageUrl + ')'"class="item-card__img"></div>
+      <!-- <div [style.backgroundImage]="'url(' + imageUrl + ')'"class="item-card__img"></div> -->
+      <img class="item-card__img" [src]="item.img" alt="фото карточкм">
     </div>
     <div class="item-card__info">
       <p class="item-card__title">{{item.title}}</p>
