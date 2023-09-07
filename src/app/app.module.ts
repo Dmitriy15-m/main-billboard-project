@@ -9,6 +9,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ItemCardPageComponent } from './pages/item-card-page/item-card-page.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import { ItemCardPageComponent } from './pages/item-card-page/item-card-page.com
     ItemCardComponent,
     ItemsPageComponent,
     ErrorComponent,
-    ItemCardPageComponent
+    ItemCardPageComponent,
   ],
   imports: [
     BrowserModule,

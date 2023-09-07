@@ -9,7 +9,7 @@ header {
   border-bottom: 1px solid #e2e8f0;
 }
 
-.header-top {
+.header-auth{
   display: flex;
   align-items: center;
   height: 52px;
@@ -27,7 +27,7 @@ header {
     margin-right: 20px;
   }
 
-  &__login-button {
+  &__login-block {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,9 +45,8 @@ header {
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    // display: none;
 
-    li {
+    &__item {
       margin: 0 8px;
       font-size: 14px;
       font-weight: 400;
@@ -59,23 +58,24 @@ header {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
     }
-    .dropdown__li-one {
+
+    &__item:first-child {
       margin-top: 8px;
     }
-    .dropdown__li-two {
+    &__item:nth-child(2) {
       margin-top: 16px;
     }
-    .dropdown__li-three {
+    &__item:last-child {
       margin-top: 16px;
       color: red;
     }
   }
 
-  // &__unregistered-status {
-  //   svg {
-  //     margin-right: 8px;
-  //   }
-  // }
+  &__unregistered-status {
+    svg {
+      margin-right: 8px;
+    }
+  }
 
   &__registered-status {
     display: flex;
@@ -95,7 +95,7 @@ header {
   }
 }
 
-.header-bottom {
+.header-search{
   display: flex;
   align-items: center;
   height: 84px;
@@ -120,11 +120,6 @@ header {
     width: 900px;
     margin-right: 20px;
   }
-
-  // &__categories {
-  //   border: 1px solid red;
-  //   margin: 0 12px;
-  // }
 
   &__categories-icon {
     display: none;
@@ -177,9 +172,9 @@ header {
   }
 }
 
-.header-top__login-button,
-.header-top__new-ad-btn,
-.header-bottom__search-btn {
+.header-auth__login-block,
+.header-auth__new-ad-btn,
+.header-search__search-btn {
   font-size: 14px;
   color: $white;
   cursor: pointer;
@@ -195,20 +190,20 @@ header {
   header {
     padding-bottom: 15px;
   }
-  .header-bottom__inner {
+  .header-search__inner {
     justify-content: center;
   }
 }
 
 @media (max-width: 500px) {
-  .header-bottom__title {
+  .header-search__title {
     font-size: 24px;
   }
-  .header-bottom__categories-icon {
+  .header-search__categories-icon {
     margin: 0 15px;
     display: block;
   }
-  .header-bottom__categories-btn {
+  .header-search__categories-btn {
     display: none;
   }
 }

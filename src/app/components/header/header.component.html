@@ -1,28 +1,34 @@
 <header>
-  <div class="header-top">
+  <div class="header-auth">
     <div class="container">
-      <div class="header-top__inner">
-        <div class="header-top__row">
-          <button class="header-top__login-button" type="button">
-            <!-- <ul class="dropdown">
-               <li class="dropdown__li-one">Мои объявления</li>
-               <li class="dropdown__li-two">Настройки</li>
-               <li class="dropdown__li-three">Выйти</li>
-            </ul> -->
-            <!-- <div class="header-top__unregistered-status">
+      <div class="header-auth__inner">
+        <div class="header-auth__row">
+          <div class="header-auth__login-block">
+            <div class="header-auth__unregistered-status">
               <svg
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M8 8C8.99456 8 9.94839 7.60491 10.6517 6.90165C11.3549 6.19839 11.75 5.24456 11.75 4.25C11.75 3.25544 11.3549 2.30161 10.6517 1.59835C9.94839 0.895088 8.99456 0.5 8 0.5C7.00544 0.5 6.05161 0.895088 5.34835 1.59835C4.64509 2.30161 4.25 3.25544 4.25 4.25C4.25 5.24456 4.64509 6.19839 5.34835 6.90165C6.05161 7.60491 7.00544 8 8 8ZM10.5 4.25C10.5 4.91304 10.2366 5.54893 9.76777 6.01777C9.29893 6.48661 8.66304 6.75 8 6.75C7.33696 6.75 6.70107 6.48661 6.23223 6.01777C5.76339 5.54893 5.5 4.91304 5.5 4.25C5.5 3.58696 5.76339 2.95107 6.23223 2.48223C6.70107 2.01339 7.33696 1.75 8 1.75C8.66304 1.75 9.29893 2.01339 9.76777 2.48223C10.2366 2.95107 10.5 3.58696 10.5 4.25ZM15.5 14.25C15.5 15.5 14.25 15.5 14.25 15.5H1.75C1.75 15.5 0.5 15.5 0.5 14.25C0.5 13 1.75 9.25 8 9.25C14.25 9.25 15.5 13 15.5 14.25ZM14.25 14.245C14.2487 13.9375 14.0575 13.0125 13.21 12.165C12.395 11.35 10.8612 10.5 8 10.5C5.1375 10.5 3.605 11.35 2.79 12.165C1.9425 13.0125 1.7525 13.9375 1.75 14.245H14.25Z"
-                  fill="white" />
+                  fill="white"
+                />
               </svg>
               <span>Войти</span>
-            </div> -->
-            <div class="header-top__registered-status">
+            </div>
+            <div
+              class="header-auth__registered-status"
+              *ngIf="false"
+              (click)="toggle()"
+            >
+              <ul *ngIf="showSetting" class="dropdown">
+                <li class="dropdown__item">Мои объявления</li>
+                <li class="dropdown__item">Настройки</li>
+                <li class="dropdown__item">Выйти</li>
+              </ul>
               <svg
                 width="16"
                 height="16"
@@ -53,9 +59,8 @@
                 />
               </svg>
             </div>
-          </button>
-
-          <a class="header-top__new-ad-btn" href="">
+          </div>
+          <a class="header-auth__new-ad-btn" href="">
             <span>Новое объявление </span>
             <svg
               width="20"
@@ -75,13 +80,13 @@
     </div>
   </div>
 
-  <div class="header-bottom">
+  <div class="header-search">
     <div class="container">
-      <div class="header-bottom__inner">
-        <h3 class="header-bottom__title">Доска объявлений</h3>
-        <div class="header-bottom__form">
+      <div class="header-search__inner">
+        <h3 class="header-search__title">Доска объявлений</h3>
+        <div class="header-search__form">
           <svg
-            class="header-bottom__categories-icon"
+            class="header-search__categories-icon"
             width="20"
             height="12"
             viewBox="0 0 20 12"
@@ -95,7 +100,7 @@
               fill="#3B82F6"
             />
           </svg>
-          <button class="header-bottom__categories-btn" type="button">
+          <button class="header-search__categories-btn" type="button">
             <svg
               width="20"
               height="12"
@@ -112,13 +117,13 @@
             </svg>
             <span>Все категории</span>
           </button>
-          <div class="header-bottom__search">
+          <div class="header-search__search">
             <input
-              class="header-bottom__search-input"
+              class="header-search__search-input"
               placeholder="Поиск по объявлениям"
               type="text"
             />
-            <button class="header-bottom__search-btn" type="button">
+            <button class="header-search__search-btn" type="button">
               <span>Найти</span>
               <svg
                 width="16"
