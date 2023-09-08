@@ -8,6 +8,7 @@ import { ItemsPageComponent } from './pages/items-page/items-page.component';
 import { ErrorComponent } from './components/error/error.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ItemCardPageComponent } from './pages/item-card-page/item-card-page.component';
+import { Header2Component } from './components/header2/header2.component';
 
 
 @NgModule({
@@ -18,13 +19,10 @@ import { ItemCardPageComponent } from './pages/item-card-page/item-card-page.com
     ItemsPageComponent,
     ErrorComponent,
     ItemCardPageComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
+    Header2Component,
+   ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
