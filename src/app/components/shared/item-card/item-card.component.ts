@@ -1,4 +1,4 @@
-import { IItemCard } from 'src/app/models/item-card';
+import { IItemCard } from '../../../models/item-card';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,11 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './item-card.component.html',
   styleUrls: ['./item-card.component.scss'],
 })
-export class ItemCardComponent implements OnInit {
+export class ItemCardComponent  {
   @Input() item!: IItemCard;
-  // imageUrl!: string;
-
-  ngOnInit(): void {
-  //  this.imageUrl = this.item.img
-  }
 }

@@ -1,7 +1,7 @@
 export interface IItemCard {
   img: string;
   title: string;
-  price: number;
+  price: string;
   location: string;
   visitTime: string;
 }

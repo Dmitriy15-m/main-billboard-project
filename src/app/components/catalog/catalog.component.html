@@ -1,0 +1,14 @@
+<main>
+  <p class="offer-title">Рекомендации для вас</p>
+  <p *ngIf="false" class="loading-title">Загрузка.. .</p>
+
+
+  <div class="container">
+  <ul *ngIf="itemList" class="items-list">
+    <app-item-card
+      *ngFor="let item of itemList['main-page']"
+      [item]="item"
+    ></app-item-card>
+  </ul>
+</div>
+</main>

@@ -1,28 +1,35 @@
+import { ErrorComponent } from './components/error/error.component';
+
+import { SearchComponent } from './components/header/search/search.component';
+import { AuthModule } from './components/header/auth/auth.module';
+import { HeaderComponent } from './components/header/header.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { ItemCardComponent } from './components/item-card/item-card.component';
-import { ItemsPageComponent } from './pages/items-page/items-page.component';
-import { ErrorComponent } from './components/error/error.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ItemCardPageComponent } from './pages/item-card-page/item-card-page.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SearchComponent } from './components/header/search/search.component';
-import { AuthModule } from './components/header/auth/auth.module';
+import { ItemsPageComponent } from './pages/items-page/items-page.component';
+import { CatalogModule } from './components/catalog/catalog.module';
+// import { ItemCardComponent } from './components/shared/item-card/item-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemCardComponent,
+    HeaderComponent,
+    SearchComponent,
+    // ItemCardComponent,
     ItemsPageComponent,
     ErrorComponent,
-    ItemCardPageComponent,
-    HeaderComponent,
-    SearchComponent
-   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule,AuthModule],
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    AuthModule,
+    CatalogModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [],
 })
 export class AppModule {}
