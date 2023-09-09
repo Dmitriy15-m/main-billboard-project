@@ -1,0 +1,68 @@
+$white: #ffffff;
+$primary: #3b82f6;
+$secondary-text: #64748b;
+$dark: #1e293b;
+
+.desc {
+  margin: 16px 0 0 16px;
+  padding-left: 20px;
+
+  &__price {
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__phone-number-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 48px;
+    background-color: $primary;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  &__svg {
+    margin-right: 20px;
+  }
+
+  &__number-text {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__address-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__address-map {
+    margin-right: 8px;
+    color: $primary;
+  }
+
+  &__about-product {
+    max-width: 380px;
+    width: 100%;
+  }
+
+  &__about-title,
+  &__address-title {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__address-str,
+  &__about-product,
+  &__address-map {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}

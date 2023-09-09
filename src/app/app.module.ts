@@ -8,18 +8,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ItemsPageComponent } from './pages/items-page/items-page.component';
 import { CatalogModule } from './components/catalog/catalog.module';
-// import { ItemCardComponent } from './components/shared/item-card/item-card.component';
+import { ItemCardPageComponent } from './components/item-card-page/item-card-page.component';
+import { GalleryComponent } from './components/item-card-page/gallery/gallery.component';
+import { DescComponent } from './components/item-card-page/desc/desc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SearchComponent,
-    // ItemCardComponent,
-    ItemsPageComponent,
+    ItemCardPageComponent,
     ErrorComponent,
+    GalleryComponent,
+    DescComponent,
   ],
   imports: [
     BrowserModule,

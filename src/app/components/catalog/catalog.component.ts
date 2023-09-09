@@ -94,5 +94,5 @@ export class CatalogComponent {
         visitTime: 'Сегодня 09:46',
       },
     ],
-  };
+  };  // mock data
 }
