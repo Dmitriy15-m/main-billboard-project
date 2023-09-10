@@ -1,0 +1,20 @@
+$secondary-text: #64748b;
+
+ .breadcrumbs {
+    display: flex;
+    width: 386px;
+    height: 24px;
+    margin: 20px 0 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+    list-style-type: disc;
+    color: $secondary-text;
+
+    & li:first-child {
+      margin-left: 5px;
+      list-style-type: none;
+    }
+    & li {
+      margin-left: 20px;
+    }
+  }
