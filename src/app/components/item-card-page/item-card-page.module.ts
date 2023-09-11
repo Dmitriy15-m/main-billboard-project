@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DescComponent } from './desc/desc.component';
-import { GalleryComponent } from './gallery/gallery.component';
+import { DescComponent } from './components/desc/desc.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 import { ItemCardPageComponent } from './item-card-page.component';
 import { BreadcrumbsModule } from '../shared/breadcrumbs/breadcrumbs.module';
 
