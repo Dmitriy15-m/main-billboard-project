@@ -1,0 +1,32 @@
+$white: #ffffff;
+$primary: #3b82f6;
+
+.categories-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 152px;
+  height: 36px;
+  margin: 0 12px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: $primary;
+  background-color: $white;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.svg {
+  margin: 0 8px;
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .svg {
+    display: block;
+  }
+  .categories-btn {
+    display: none;
+  }
+}

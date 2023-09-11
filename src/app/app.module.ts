@@ -11,7 +11,9 @@ import { CatalogModule } from './components/catalog/catalog.module';
 import { ItemCardModule } from './components/shared/item-card/item-card.module';
 import { ItemCardPageModule } from './components/item-card-page/item-card-page.module';
 import { AuthorizationModule } from './components/header/auth-top/authorization/authorization.module';
-
+import { AllCategoriesComponent } from './components/header/all-categories/all-categories.component';
+import { CategoriesBtnComponent } from './components/header/search-bottom/categories-btn/categories-btn.component';
+import { SearchInputComponent } from './components/header/search-bottom/search-input/search-input.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,9 @@ import { AuthorizationModule } from './components/header/auth-top/authorization/
     AuthComponent,
     SearchComponent,
     ErrorComponent,
+    AllCategoriesComponent,
+    CategoriesBtnComponent,
+    SearchInputComponent,
   ],
   imports: [
     BrowserModule,
