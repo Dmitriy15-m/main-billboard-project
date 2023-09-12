@@ -1,4 +1,3 @@
-import { ErrorComponent } from './components/error/error.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CatalogModule } from './components/catalog/catalog.module';
-import { ItemCardModule } from './components/shared/item-card/item-card.module';
 import { ItemCardPageModule } from './components/item-card-page/item-card-page.module';
 import { AuthorizationModule } from './components/header/components/auth-top/authorization/authorization.module';
 import { AuthComponent } from './components/header/components/auth-top/auth.component';import { SearchInputComponent } from './components/header/components/search-bottom/components/search-input/search-input.component';
@@ -20,7 +18,6 @@ import { AllCategoriesModule } from './components/all-categories/all-categories.
     HeaderComponent,
     AuthComponent,
     SearchComponent,
-    ErrorComponent,
     CategoriesBtnComponent,
     SearchInputComponent,
   ],
@@ -29,10 +26,9 @@ import { AllCategoriesModule } from './components/all-categories/all-categories.
     HttpClientModule,
     AppRoutingModule,
     CatalogModule,
-    ItemCardModule,
     ItemCardPageModule,
     AuthorizationModule,
-    AllCategoriesModule
+    AllCategoriesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

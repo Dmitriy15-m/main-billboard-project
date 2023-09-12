@@ -7,6 +7,7 @@ import { IItemsList } from 'src/app/models/item-card';
   styleUrls: ['./catalog.component.scss'],
 })
 export class CatalogComponent {
+
   itemList: IItemsList = {
     'main-page': [
       {

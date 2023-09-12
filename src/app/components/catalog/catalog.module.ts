@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogComponent } from './catalog.component';
-import { ItemCardModule } from '../shared/item-card/item-card.module';
+import { NewAdComponent } from '../shared/new-ad/new-ad.component';
+import { ItemCardComponent } from '../shared/item-card/item-card.component';
 
 @NgModule({
   declarations: [CatalogComponent],
-  imports: [CommonModule, ItemCardModule],
+  imports: [CommonModule, NewAdComponent, ItemCardComponent],
   exports: [CatalogComponent],
 })
 export class CatalogModule {}
