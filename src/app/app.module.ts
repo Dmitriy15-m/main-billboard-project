@@ -8,11 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { CatalogModule } from './components/catalog/catalog.module';
 import { ItemCardModule } from './components/shared/item-card/item-card.module';
 import { ItemCardPageModule } from './components/item-card-page/item-card-page.module';
-import { AllCategoriesComponent } from './components/header/components/search-bottom/components/all-categories/all-categories.component';
 import { AuthorizationModule } from './components/header/components/auth-top/authorization/authorization.module';
 import { AuthComponent } from './components/header/components/auth-top/auth.component';import { SearchInputComponent } from './components/header/components/search-bottom/components/search-input/search-input.component';
 import { SearchComponent } from './components/header/components/search-bottom/search.component';
 import { CategoriesBtnComponent } from './components/header/components/search-bottom/components/categories-btn/categories-btn.component';
+import { AllCategoriesComponent } from './components/all-categories/all-categories.component';
 
 @NgModule({
   declarations: [

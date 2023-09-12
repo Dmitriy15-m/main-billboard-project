@@ -12,9 +12,10 @@ $light-forms-border: #cbd5e1;
 .row-page {
   display: flex;
   gap: 50px;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 80px 20px;
   padding: 20px 0 0 0;
-  border-top: 1px solid $light-forms-border;
+  border-bottom: 1px solid $light-forms-border;
+
 }
 .categories-block {
   display: flex;
