@@ -12,7 +12,7 @@ import { AuthorizationModule } from './components/header/components/auth-top/aut
 import { AuthComponent } from './components/header/components/auth-top/auth.component';import { SearchInputComponent } from './components/header/components/search-bottom/components/search-input/search-input.component';
 import { SearchComponent } from './components/header/components/search-bottom/search.component';
 import { CategoriesBtnComponent } from './components/header/components/search-bottom/components/categories-btn/categories-btn.component';
-import { AllCategoriesComponent } from './components/all-categories/all-categories.component';
+import { AllCategoriesModule } from './components/all-categories/all-categories.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,6 @@ import { AllCategoriesComponent } from './components/all-categories/all-categori
     AuthComponent,
     SearchComponent,
     ErrorComponent,
-    AllCategoriesComponent,
     CategoriesBtnComponent,
     SearchInputComponent,
   ],
@@ -33,6 +32,7 @@ import { AllCategoriesComponent } from './components/all-categories/all-categori
     ItemCardModule,
     ItemCardPageModule,
     AuthorizationModule,
+    AllCategoriesModule
   ],
   providers: [],
   bootstrap: [AppComponent],
