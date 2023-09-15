@@ -1,0 +1,115 @@
+$dark: #1e293b;
+$dark-primary: #2c3e53;
+$white: #ffffff;
+$primary: #3b82f6;
+$light-forms-border: #cbd5e1;
+$secondary-text: #64748b;
+$surfaces: #f8fafc;
+
+.new-ad-page {
+  margin: 5px 20px 80px 20px;
+
+  * {
+    outline: none;
+  }
+
+  &__title {
+    margin: 24px 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
+
+  &__add-img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 856px;
+    max-width: 100%;
+    padding: 8px;
+    background-color: $surfaces;
+    border: 1px solid $light-forms-border;
+    border-radius: 4px;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 186px;
+      height: 35px;
+      margin-right: 16px;
+      background-color: $primary;
+      color: $white;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__add-post-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 46px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    background-color: $primary;
+    color: $white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__add-site-rules {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $secondary-text;
+    a {
+      color: $primary;
+    }
+  }
+
+  &__add-price,
+  &__add-img {
+    margin-bottom: 16px;
+  }
+
+  &__add-price {
+    p {
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+  &__add-price,
+  &__add-img {
+    select,
+    input {
+      height: 48px;
+      padding: 0px 12px;
+      border-radius: 4px;
+      border: 1px solid $light-forms-border;
+    }
+  }
+
+  &__add-img {
+    input,
+    textarea {
+      width: 856px;
+    }
+  }
+}
+
+.container {
+  max-width: 100%;
+  width: 1296px;
+  margin: 0 auto;
+}

@@ -1,0 +1,77 @@
+$dark: #1e293b;
+$dark-primary: #2c3e53;
+$white: #ffffff;
+$primary: #3b82f6;
+$light-forms-border: #cbd5e1;
+$secondary-text: #64748b;
+$surfaces: #F8FAFC;
+
+
+* {
+  outline: none;
+}
+
+.categoriesForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+
+  &__name-ads {
+    width: 856px;
+    max-width: 100%;
+
+    input {
+      width: 100%;
+      height: 48px;
+      padding: 0px 12px;
+      border-radius: 4px;
+      border: 1px solid $light-forms-border;
+    }
+  }
+
+  &__desc {
+    width: 856px;
+    max-width: 100%;
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      height: 168px;
+      border: 1px solid $light-forms-border;
+      resize: none;
+    }
+  }
+
+  &__address{
+    width: 856px;
+    max-width: 100%;
+
+    input{
+      width: 100%;
+      height: 48px;
+      padding: 0px 12px;
+      border-radius: 4px;
+      border: 1px solid $light-forms-border;
+    };
+  }
+
+  select {
+    width: 305px;
+    height: 48px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    border: 1px solid $light-forms-border;
+    color: $secondary-text;
+  }
+  span {
+    color: red;
+  }
+
+  p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+   }
+}

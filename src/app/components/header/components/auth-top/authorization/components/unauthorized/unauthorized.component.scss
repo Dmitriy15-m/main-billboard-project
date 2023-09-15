@@ -1,0 +1,12 @@
+$dark: #1e293b;
+$white: #ffffff;
+
+.auth__unregistered-status {
+  svg {
+    margin-right: 8px;
+  }
+  span {
+    font-size: 14px;
+    color: $white;
+  }
+}

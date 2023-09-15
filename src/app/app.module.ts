@@ -11,6 +11,8 @@ import { AuthComponent } from './components/header/components/auth-top/auth.comp
 import { SearchComponent } from './components/header/components/search-bottom/search.component';
 import { CategoriesBtnComponent } from './components/header/components/search-bottom/components/categories-btn/categories-btn.component';
 import { AllCategoriesModule } from './components/all-categories/all-categories.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewAdFormModule } from './components/new-ad-form/new-ad-form.module';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,13 @@ import { AllCategoriesModule } from './components/all-categories/all-categories.
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     CatalogModule,
     ItemCardPageModule,
     AuthorizationModule,
     AllCategoriesModule,
+    ReactiveFormsModule,
+    NewAdFormModule
   ],
   providers: [],
   bootstrap: [AppComponent],

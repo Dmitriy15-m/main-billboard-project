@@ -7,5 +7,5 @@ export interface IItemCard {
 }
 
 export interface IItemsList {
-  'main-page': IItemCard[];
+  [category: string]: IItemCard[];
 }

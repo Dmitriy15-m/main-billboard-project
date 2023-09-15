@@ -5,7 +5,7 @@
 
   <div class="container">
     <ul *ngIf="itemList" class="items-list">
-      <app-new-ad *ngIf="true"></app-new-ad>
+      <app-new-ad *ngIf="false"></app-new-ad>
       <app-item-card
         *ngFor="let item of itemList['main-page']"
         [item]="item"

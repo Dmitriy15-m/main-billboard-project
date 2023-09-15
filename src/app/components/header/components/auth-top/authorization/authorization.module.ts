@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthorizationComponent } from './authorization.component';
+import { AuthorizedComponent } from './components/authorized/authorized.component';
+import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 
 
 
 @NgModule({
-  declarations: [AuthorizationComponent],
+  declarations: [AuthorizationComponent, AuthorizedComponent, UnauthorizedComponent],
   imports: [
     CommonModule
   ],

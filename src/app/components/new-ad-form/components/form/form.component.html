@@ -1,0 +1,44 @@
+<form class="categoriesForm" [formGroup]="myForm">
+  <p>
+    Выберите категорию <span *ngIf="!myForm.value.categories">*</span>
+  </p>
+  <select
+    formControlName="categories"
+    (change)="onChangeCategories()"
+  >
+    <option value="" disabled selected>Нажмите чтобы выбрать</option>
+    <option *ngFor="let option of categoriesData" [value]="option">
+      {{ option }}
+    </option>
+  </select>
+
+  <select
+    *ngIf="myForm.value.categories"
+    formControlName="subCategory"
+    (change)="onChangeSubCategory()"
+  >
+    <option value="" disabled selected>Нажмите чтобы выбрать</option>
+    <option *ngFor="let option of subCategories" [value]="option">
+      {{ option }}
+    </option>
+  </select>
+
+  <div class="categoriesForm__name-ads">
+    <p>Название объявления <span>*</span></p>
+    <input placeholder="Что хотите продать?" type="text" />
+  </div>
+
+  <div class="categoriesForm__desc">
+    <p>Описание</p>
+    <textarea
+      name="about ads"
+      id=""
+      placeholder="Расскажите подробнее о товаре или услуге"
+    ></textarea>
+  </div>
+
+  <div class="categoriesForm__address">
+    <p>Адрес (место проведения сделки) <span>*</span></p>
+    <input placeholder="Начните вводить адрес" type="text" />
+  </div>
+</form>
