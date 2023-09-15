@@ -13,6 +13,8 @@ import { CategoriesBtnComponent } from './components/header/components/search-bo
 import { AllCategoriesModule } from './components/all-categories/all-categories.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewAdFormModule } from './components/new-ad-form/new-ad-form.module';
+import { AuthPageModule } from './components/auth-page/auth-page.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { NewAdFormModule } from './components/new-ad-form/new-ad-form.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    // RouterModule,
     FormsModule,
     CatalogModule,
     ItemCardPageModule,
     AuthorizationModule,
     AllCategoriesModule,
     ReactiveFormsModule,
-    NewAdFormModule
+    NewAdFormModule,
+    AuthPageModule
   ],
   providers: [],
   bootstrap: [AppComponent],
