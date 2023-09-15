@@ -8,10 +8,7 @@ import { ErrorService } from './error.service';
   providedIn: 'root',
 })
 export class ItemsCardService {
-  constructor(
-    private http: HttpClient,
-    private errService: ErrorService,
-  ) {}
+  constructor(private http: HttpClient, private errService: ErrorService) {}
 
   getData(): Observable<0 | IItemsList> {
     return this.http.get<IItemsList>('../assets/data/items.json').pipe(

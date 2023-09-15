@@ -1,33 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
-
-
-// import { NgModule } from '@angular/core';
-// import { RouterModule, Routes } from '@angular/router';
-// import { MainComponent } from './pages/main/main.component';
-// import { LkComponent } from './pages/lk/lk.component';
-
-// const routes: Routes = [
-//   {
-//     path: '',
-//     redirectTo: 'main',
-//     pathMatch: 'full',
-//   },
-//   {
-//     path: 'main',
-//     title: 'Главная',
-//     loadChildren: () =>
-//       import('./pages/main/main.module').then((m) => m.MainModule),
-//   },
-
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'catalog',
-  //   pathMatch: 'full',
-  // },
+  {
+    path: '',
+    redirectTo: 'catalog',
+    pathMatch: 'full',
+  },
   {
     path: 'catalog',
     loadChildren: () =>
@@ -47,6 +26,21 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/auth-page/auth-page.module').then(
         (m) => m.AuthPageModule
+      ),
+  },
+  {
+    path: 'all-categories',
+    loadChildren: () =>
+      import('./components/all-categories/all-categories.module').then(
+        (m) => m.AllCategoriesModule
+      ),
+  },
+
+  {
+    path: 'new-ad',
+    loadChildren: () =>
+      import('./components/new-ad-form/new-ad-form.module').then(
+        (m) => m.NewAdFormModule
       ),
   },
 ];
