@@ -7,6 +7,7 @@ import { SelectedCategoryTitleComponent } from './components/selected-category/c
 import { SelectedSubCategoriesComponent } from './components/selected-category/components/selected-sub-categories/selected-sub-categories.component';
 import { SubCategoryComponent } from './components/selected-category/components/selected-sub-categories/components/sub-category/sub-category.component';
 import { AllCategoriesRoutingModule } from './all-categories-routing.module';
+import { CategoryItemComponent } from '../shared/category-item/category-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { AllCategoriesRoutingModule } from './all-categories-routing.module';
     SelectedSubCategoriesComponent,
     SubCategoryComponent,
   ],
-  imports: [CommonModule, AllCategoriesRoutingModule],
+  imports: [CommonModule, AllCategoriesRoutingModule,CategoryItemComponent],
   exports: [AllCategoriesComponent],
 })
 export class AllCategoriesModule {}

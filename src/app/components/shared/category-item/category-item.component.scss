@@ -1,0 +1,20 @@
+$dark: #1e293b;
+$white: #ffffff;
+$light-forms-border: #cbd5e1;
+
+a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+a:hover {
+  background-color: $light-forms-border;
+  border-radius: 8px;
+}
+
+span {
+  color: $dark;
+  padding: 8px 12px;
+}

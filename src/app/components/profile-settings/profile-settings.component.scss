@@ -19,7 +19,7 @@ $secondary-text: #64748b;
   &__btn-block {
     display: flex;
     gap: 24px;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 24px;
   }

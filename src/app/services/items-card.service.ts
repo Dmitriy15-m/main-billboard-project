@@ -13,8 +13,6 @@ export class ItemsCardService {
   isShow = true;
 
   toggle() {
-    console.log('inside service');
-
     this.isShow = !this.isShow
   }
 

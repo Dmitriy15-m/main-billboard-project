@@ -91,19 +91,4 @@ export class NewAdFormComponent {
   //   'Бизнес и оборудование': ['Готовый бизнес', 'Оборудование для бизнеса'],
   // };
 
-  // myForm: FormGroup = new FormGroup({
-  //   categories: new FormControl('', [Validators.required]),
-  //   subCategory: new FormControl(''),
-  // });
-
-  // onChangeCategories() {
-  //   console.log(this.myForm);
-  //   let category = this.myForm.get('categories')?.value;
-  //   this.subCategories = this.getSubCategory(category);
-  // }
-
-  // onChangeSubCategory() {}
-  // getSubCategory(category: string) {
-  //   return this.subCategoriesData[category];
-  // }
 }
