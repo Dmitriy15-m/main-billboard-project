@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IItemsList } from 'src/app/models/item-card';
+import { ItemsCardService } from 'src/app/services/items-card.service';
 
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.scss'],
 })
-export class CatalogComponent {
+export class CatalogComponent implements OnInit {
+  constructor(public itemsService: ItemsCardService) {}
+
 
   itemList: IItemsList = {
     'main-page': [
@@ -95,5 +98,10 @@ export class CatalogComponent {
         visitTime: 'Сегодня 09:46',
       },
     ],
-  };  // mock data
+  }; // mock data
+
+
+  ngOnInit(): void {
+
+  }
 }

@@ -1,15 +1,18 @@
 <main>
-  <p class="offer-title">Рекомендации для вас</p>
-  <p *ngIf="false" class="my-ad-title">Мои объявления</p>
+  <p *ngIf="itemsService.isShow" class="offer-title">Рекомендации для вас</p>
+  <p *ngIf="!itemsService.isShow" class="my-ad-title">Мои объявления</p>
   <p *ngIf="false" class="loading-title">Загрузка.. .</p>
 
   <div class="container">
-    <ul *ngIf="itemList" class="items-list">
-      <app-new-ad *ngIf="false"></app-new-ad>
-      <app-item-card
-        *ngFor="let item of itemList['main-page']"
-        [item]="item"
-      ></app-item-card>
+    <ul class="items-list">
+      <app-new-ad *ngIf="!itemsService.isShow"></app-new-ad>
+
+      <ng-container *ngIf="itemsService.isShow">
+        <app-item-card
+          *ngFor="let item of itemList['main-page']"
+          [item]="item"
+        ></app-item-card>
+      </ng-container>
     </ul>
   </div>
 </main>

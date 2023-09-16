@@ -1,7 +1,7 @@
-<div *ngIf="false" class="auth__registered-status" >
-  <ul *ngIf="false" class="dropdown">
-    <li class="dropdown__item">Мои объявления</li>
-    <li class="dropdown__item">Настройки</li>
+<div class="auth__registered-status">
+  <ul *ngIf="true" class="dropdown">
+    <li routerLink="catalog" (click)="toggle()" class="dropdown__item">Мои объявления</li>
+    <li routerLink="profile-settings" class="dropdown__item">Настройки</li>
     <li class="dropdown__item">Выйти</li>
   </ul>
   <svg
@@ -34,4 +34,3 @@
     />
   </svg>
 </div>
-

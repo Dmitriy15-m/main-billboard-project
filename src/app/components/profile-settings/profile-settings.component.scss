@@ -1,0 +1,60 @@
+$dark: #1e293b;
+$dark-primary: #2c3e53;
+$white: #ffffff;
+$primary: #3b82f6;
+$light-forms-border: #cbd5e1;
+$secondary-text: #64748b;
+
+.personal-account-page {
+  margin: 0 20px 124px 20px;
+
+  * {
+    outline: none;
+  }
+
+  &__inner {
+    margin: 5px;
+  }
+
+  &__btn-block {
+    display: flex;
+    gap: 24px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  &__title {
+    margin: 32px 0 24px 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
+  &__save-btn {
+    width: 132px;
+  }
+
+  &__change-btn {
+    width: 186px;
+    margin-top: 24px;
+  }
+
+  &__save-btn,
+  &__change-btn {
+    height: 48px;
+    background-color: $primary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+    border-radius: 4px;
+    color: $white;
+  }
+}
+
+.container {
+  max-width: 100%;
+  width: 1296px;
+  margin: 0 auto;
+}

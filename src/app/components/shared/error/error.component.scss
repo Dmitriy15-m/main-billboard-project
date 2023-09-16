@@ -33,19 +33,8 @@ $white: #ffffff;
 }
 
 .shrug {
-  display: none;
   margin-top: 30px;
   text-align: center;
-}
-
-.img-container {
-  margin: 0 auto;
-  height: 300px;
-  width: 550px;
-  background: url("../../../assets/img/error/maxresdefault.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 @media (max-width: 940px) {

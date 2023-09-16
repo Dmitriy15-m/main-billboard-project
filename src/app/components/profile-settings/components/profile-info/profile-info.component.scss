@@ -1,0 +1,48 @@
+$dark: #1e293b;
+$dark-primary: #2c3e53;
+$white: #ffffff;
+$primary: #3b82f6;
+$light-forms-border: #cbd5e1;
+$secondary-text: #64748b;
+$success-text: #22c55e;
+
+
+* {
+  outline: none;
+}
+
+.profile-info {
+  flex-wrap: wrap;
+
+  &__name,
+  &__phone-number,
+  &__address {
+    width: 416px;
+    max-width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  &__name,
+  &__phone-number,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 80px;
+  }
+
+  &__name,
+  &__phone-number,
+  &__address
+  {
+    input {
+      height: 48px;
+      padding: 8px 12px;
+      border: 1px solid $light-forms-border;
+      border-radius: 4px;
+    }
+  }
+}
