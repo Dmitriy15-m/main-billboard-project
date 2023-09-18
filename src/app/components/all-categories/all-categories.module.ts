@@ -8,17 +8,24 @@ import { SelectedSubCategoriesComponent } from './components/selected-category/c
 import { SubCategoryComponent } from './components/selected-category/components/selected-sub-categories/components/sub-category/sub-category.component';
 import { AllCategoriesRoutingModule } from './all-categories-routing.module';
 import { CategoryItemComponent } from '../shared/category-item/category-item.component';
+import { CategoriesBlockModule } from './components/categories-block/categories-block.module';
+import { SelectedCategoryModule } from './components/selected-category/selected-category.module';
 
 @NgModule({
   declarations: [
     AllCategoriesComponent,
-    CategoriesBlockComponent,
-    SelectedCategoryComponent,
-    SelectedCategoryTitleComponent,
-    SelectedSubCategoriesComponent,
-    SubCategoryComponent,
+    // CategoriesBlockComponent,
+    // SelectedCategoryComponent,
+    // SelectedCategoryTitleComponent,
+    // SelectedSubCategoriesComponent,
+    // SubCategoryComponent,
   ],
-  imports: [CommonModule, AllCategoriesRoutingModule,CategoryItemComponent],
+  imports: [
+    CommonModule,
+    AllCategoriesRoutingModule,
+    CategoriesBlockModule,
+    SelectedCategoryModule
+  ],
   exports: [AllCategoriesComponent],
 })
 export class AllCategoriesModule {}

@@ -10,6 +10,8 @@ import { SearchInputComponent } from './components/header/components/search-bott
 import { SearchComponent } from './components/header/components/search-bottom/search.component';
 import { CategoriesBtnComponent } from './components/header/components/search-bottom/components/categories-btn/categories-btn.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SelectedCategoryComponent } from './components/all-categories/components/selected-category/selected-category.component';
+import { SelectedCategoryModule } from './components/all-categories/components/selected-category/selected-category.module';
 
 @NgModule({
   declarations: [

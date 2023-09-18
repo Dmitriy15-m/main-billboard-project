@@ -29,12 +29,36 @@ const routes: Routes = [
         (m) => m.AuthPageModule
       ),
   },
+
+
   {
     path: 'all-categories',
     loadChildren: () =>
       import('./components/all-categories/all-categories.module').then(
         (m) => m.AllCategoriesModule
       ),
+    //   children: [
+    //     {path: ':id', loadChildren: () =>
+    //   import('./components/all-categories/components/selected-category/selected-category.module').then(
+    //     m => m.SelectedCategoryModule
+    //   )}
+    //   ]
+    // children: [
+    //   {
+    //     path: '',
+    //     loadChildren: () =>
+    //       import(
+    //         './components/all-categories/components/categories-block/categories-block.module'
+    //       ).then((m) => m.CategoriesBlockModule),
+    //   },
+    //   {
+    //     path: ':id',
+    //     loadChildren: () =>
+    //       import(
+    //         './components/all-categories/components/selected-category/selected-category.module'
+    //       ).then((m) => m.SelectedCategoryModule),
+    //   },
+    // ],
   },
 
   {
