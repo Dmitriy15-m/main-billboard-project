@@ -1,0 +1,16 @@
+.selected-category-title {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 650px) {
+  .selected-category-block-page__title {
+    svg {
+      display: none;
+    }
+  }
+}

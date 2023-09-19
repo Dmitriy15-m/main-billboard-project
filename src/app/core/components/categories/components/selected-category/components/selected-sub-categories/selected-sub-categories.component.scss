@@ -1,0 +1,15 @@
+$dark: #1e293b;
+$dark-primary: #2c3e53;
+$white: #ffffff;
+$primary: #3b82f6;
+$light-forms-border: #cbd5e1;
+
+.selected-sub-categories {
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+

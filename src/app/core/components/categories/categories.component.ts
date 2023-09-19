@@ -3,12 +3,13 @@ import { Subscription } from 'rxjs';
 import { ModalService } from 'src/app/services/modal-service/modal.service';
 
 @Component({
-  selector: 'app-categories-btn',
-  templateUrl: './categories-btn.component.html',
-  styleUrls: ['./categories-btn.component.scss'],
+  selector: 'app-categories',
+  templateUrl: './categories.component.html',
+  styleUrls: ['./categories.component.scss'],
 })
-export class CategoriesBtnComponent implements OnInit, OnDestroy {
+export class CategoriesComponent implements OnInit, OnDestroy {
   constructor(private modalService: ModalService) {}
+
   private subscription!: Subscription;
   isShow: boolean = false;
 

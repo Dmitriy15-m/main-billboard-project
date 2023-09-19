@@ -13,8 +13,9 @@
     fill="#3B82F6"
   />
 </svg>
-<div routerLink="/all-categories/" class="categories-btn">
+<div (click)="toggle()" class="categories-btn">
   <svg
+  *ngIf="!isShow"
     width="20"
     height="12"
     viewBox="0 0 20 12"
@@ -29,7 +30,7 @@
     />
   </svg>
   <svg
-    *ngIf="false"
+    *ngIf="isShow"
     width="20"
     height="20"
     viewBox="0 0 20 20"

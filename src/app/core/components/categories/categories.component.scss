@@ -1,0 +1,30 @@
+$dark: #1e293b;
+$dark-primary: #2c3e53;
+$white: #ffffff;
+$primary: #3b82f6;
+$light-forms-border: #cbd5e1;
+
+.modal {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 1300px;
+  background-color:rgb(128,128,128, 0.7);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1296px;
+}
+
+.categories {
+  background-color: $white;
+  border-radius: 0 0 20px 20px;
+}
+
+.row {
+  display: flex;
+  gap: 50px;
+  padding: 10px 0 10px 10px;
+}

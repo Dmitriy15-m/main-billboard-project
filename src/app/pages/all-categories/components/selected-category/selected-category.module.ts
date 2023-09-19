@@ -13,12 +13,12 @@ import { SelectedCategoryRoutingModule } from './selected-category-routing.modul
     SelectedSubCategoriesComponent,
     SubCategoryComponent,
   ],
-  imports: [CommonModule, SelectedCategoryRoutingModule ],
+  imports: [CommonModule, SelectedCategoryRoutingModule],
   exports: [
     SelectedCategoryComponent,
-    SelectedCategoryTitleComponent,
-    SelectedSubCategoriesComponent,
-    SubCategoryComponent,
+    // SelectedCategoryTitleComponent,
+    // SelectedSubCategoriesComponent,
+    // SubCategoryComponent,
   ],
 })
 export class SelectedCategoryModule {}

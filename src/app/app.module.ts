@@ -10,6 +10,13 @@ import { AuthComponent } from './core/components/header/components/auth-top/auth
 import { SearchInputComponent } from './core/components/header/components/search-bottom/components/search-input/search-input.component';
 import { SearchComponent } from './core/components/header/components/search-bottom/search.component';
 import { CategoriesBtnComponent } from './core/components/header/components/search-bottom/components/categories-btn/categories-btn.component';
+import { CategoryItemComponent } from './shared/category-item/category-item.component';
+import { CategoriesBlockComponent } from './core/components/categories/components/categories-block/categories-block.component';
+import { SelectedCategoryTitleComponent } from './core/components/categories/components/selected-category/components/selected-category-title/selected-category-title.component';
+import { SelectedSubCategoriesComponent } from './core/components/categories/components/selected-category/components/selected-sub-categories/selected-sub-categories.component';
+import { SubCategoryComponent } from './core/components/categories/components/selected-category/components/selected-sub-categories/components/sub-category/sub-category.component';
+import { CategoriesComponent } from './core/components/categories/categories.component';
+import { SelectedCategoryComponent } from './core/components/categories/components/selected-category/selected-category.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +26,12 @@ import { CategoriesBtnComponent } from './core/components/header/components/sear
     SearchComponent,
     CategoriesBtnComponent,
     SearchInputComponent,
+    CategoriesComponent,
+    CategoriesBlockComponent,
+    SelectedCategoryTitleComponent,
+    SelectedSubCategoriesComponent,
+    SubCategoryComponent,
+    SelectedCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +40,7 @@ import { CategoriesBtnComponent } from './core/components/header/components/sear
     FormsModule,
     ReactiveFormsModule,
     AuthorizationModule,
+    CategoryItemComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
