@@ -1,11 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ModalService } from 'src/app/services/modal-service/modal.service';
+import { CategoriesService } from './categories-service/categories.service';
 
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.scss'],
+  providers: [CategoriesService],
 })
 export class CategoriesComponent implements OnInit, OnDestroy {
   constructor(private modalService: ModalService) {}
@@ -14,7 +16,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
   isShow: boolean = false;
 
   toggle() {
-    this.modalService.showModal(this.isShow);
+    this.modalService.onShowModal(this.isShow);
   }
 
   ngOnInit(): void {

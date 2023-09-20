@@ -10,12 +10,6 @@ import { ErrorService } from './error.service';
 export class ItemsCardService {
   constructor(private http: HttpClient, private errService: ErrorService) {}
 
-  isShow = true;
-
-  toggle() {
-    this.isShow = !this.isShow
-  }
-
   getData(): Observable<0 | IItemsList> {
     return this.http.get<IItemsList>('../assets/data/items.json').pipe(
       delay(2000),

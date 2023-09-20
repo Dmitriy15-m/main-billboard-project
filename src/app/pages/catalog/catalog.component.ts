@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { IItemsList } from 'src/app/models/item-card';
-import { ItemsCardService } from 'src/app/services/items-card.service';
 
 @Component({
   selector: 'app-catalog',
@@ -8,8 +8,9 @@ import { ItemsCardService } from 'src/app/services/items-card.service';
   styleUrls: ['./catalog.component.scss'],
 })
 export class CatalogComponent implements OnInit {
-  constructor(public itemsService: ItemsCardService) {}
+  constructor(private activateRoute: ActivatedRoute) {}
 
+  id = undefined;
 
   itemList: IItemsList = {
     'main-page': [
@@ -100,8 +101,7 @@ export class CatalogComponent implements OnInit {
     ],
   }; // mock data
 
-
   ngOnInit(): void {
-
+    this.id = this.activateRoute.snapshot.params['id'];
   }
 }

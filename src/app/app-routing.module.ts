@@ -16,6 +16,12 @@ const routes: Routes = [
       import('./pages/catalog/catalog.module').then((m) => m.CatalogModule),
   },
   {
+    path: 'catalog/:id',
+    title: 'Мои объявления',
+    loadChildren: () =>
+      import('./pages/catalog/catalog.module').then((m) => m.CatalogModule),
+  },
+  {
     path: 'item-card-page',
     title: 'Cтраница объявления',
     loadChildren: () =>
@@ -45,6 +51,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/profile-settings/profile-setting.module').then(
         (m) => m.ProfileSettingModule
+      ),
+  },
+  {
+    path: 'ads-on-request',
+    title: 'Объявления по запросу',
+    loadChildren: () =>
+      import('./pages/ads-on-request/ads-on-request.module').then(
+        (m) => m.AdsOnRequestModule
       ),
   },
   { path: 'categories/:id', component: CategoriesComponent },

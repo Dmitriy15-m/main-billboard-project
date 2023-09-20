@@ -7,9 +7,6 @@ import { ItemsCardService } from 'src/app/services/items-card.service';
   styleUrls: ['./authorized.component.scss'],
 })
 export class AuthorizedComponent {
-  constructor(private itemsService: ItemsCardService) {}
+  constructor() {}
 
-  toggle() {
-    this.itemsService.toggle();
-  }
 }

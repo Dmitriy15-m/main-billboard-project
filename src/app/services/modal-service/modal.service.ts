@@ -13,7 +13,7 @@ export class ModalService {
 
   public isModal$: Observable<boolean> = this.isModal.asObservable();
 
-  showModal(isShow: boolean): void {
+  onShowModal(isShow: boolean): void {
     this.isModal.next(!isShow);
   }
 }

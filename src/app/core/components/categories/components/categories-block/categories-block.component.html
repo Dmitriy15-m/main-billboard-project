@@ -1,5 +1,6 @@
 <div class="categories-block">
   <app-category-item
+    (click)="sendCategoryName(categoryName)"
     *ngFor="let categoryName of categoriesData"
     [categoryName]="categoryName"
   ></app-category-item>

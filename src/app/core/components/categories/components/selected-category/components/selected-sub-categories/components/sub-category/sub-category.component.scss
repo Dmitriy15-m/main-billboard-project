@@ -7,20 +7,18 @@ $light-forms-border: #cbd5e1;
 .sub-category {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
   flex-grow: 1;
-
   margin-bottom: 30px;
+
 
   &__row {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
+    justify-content: flex-start;
 
     h4 {
       cursor: pointer;
+      margin-right: 10px;
     }
   }
 
@@ -33,4 +31,12 @@ $light-forms-border: #cbd5e1;
   a {
     color: $dark;
   }
+}
+
+@media (max-width: 640px) {
+ .sub-category__row {
+  svg {
+    display: none;
+  }
+ }
 }

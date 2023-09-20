@@ -7,9 +7,13 @@ $light-forms-border: #cbd5e1;
 .selected-sub-categories {
   display: flex;
   flex-wrap: wrap;
-
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
 }
 
+@media (max-width: 780px) {
+  .selected-sub-categories {
+    flex-direction: column;
+  }
+}

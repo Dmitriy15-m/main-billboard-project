@@ -1,13 +1,27 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { CategoriesService } from '../../../../categories-service/categories.service';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-@Component({
-  selector: 'app-selected-sub-categories',
-  templateUrl: './selected-sub-categories.component.html',
-  styleUrls: ['./selected-sub-categories.component.scss'],
-})
-export class SelectedSubCategoriesComponent implements OnInit, OnDestroy {
+@Injectable()
+export class CategoriesService {
+  constructor() {}
+
+  category: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  category$: Observable<string> = this.category.asObservable();
+
+  categoriesData: string[] = [
+    'Транспорт',
+    'Недвижимость',
+    'Работа',
+    'Услуги',
+    'Личные вещи',
+    'Для дома и дачи',
+    'Автозапчасти и аксессуары',
+    'Электроника',
+    'Хобби и отдых',
+    'Животные',
+    'Бизнес и оборудование',
+  ]; //mock data
+
   subCategoriesData: any = {
     Транспорт: [
       'Автомобили',
@@ -108,17 +122,7 @@ export class SelectedSubCategoriesComponent implements OnInit, OnDestroy {
     ],
   }; //mock data
 
-  title!: string;
-  private subscription!: Subscription;
-
-  constructor(private categoriesService: CategoriesService) {}
-
-  ngOnInit(): void {
-    this.subscription = this.categoriesService.category$.subscribe((value) => {
-      this.title = value;
-    });
-  }
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+  changeCategory(category: string) {
+    this.category.next(category);
   }
 }

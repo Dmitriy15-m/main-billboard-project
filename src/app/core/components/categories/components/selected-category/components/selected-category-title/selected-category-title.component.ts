@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { CategoriesService } from '../../../../categories-service/categories.service';
 
 @Component({
   selector: 'app-selected-category-title',
@@ -11,12 +11,12 @@ export class SelectedCategoryTitleComponent implements OnInit, OnDestroy {
   title!: string;
   private subscription!: Subscription;
 
-  constructor(private activateRoute: ActivatedRoute) {}
+  constructor(private categoryService: CategoriesService) {}
 
   ngOnInit(): void {
-    this.subscription = this.activateRoute.params.subscribe(
-      (params) => (this.title = params['id'])
-    );
+    this.subscription = this.categoryService.category$.subscribe((value) => {
+      this.title = value;
+    });
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
