@@ -9,10 +9,8 @@ import { ModalService } from 'src/app/services/modal-service/modal.service';
   styleUrls: ['./categories-btn.component.scss'],
 })
 export class CategoriesBtnComponent implements OnInit, OnDestroy {
-  constructor(
-    private modalService: ModalService,
-    // private router: Router,
-  ) {}
+  constructor(private modalService: ModalService)
+  {}
 
   private subscription!: Subscription;
   isShow: boolean = false;
@@ -23,9 +21,9 @@ export class CategoriesBtnComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.modalService.isModal$.subscribe((value) => {
-      this.isShow = value});
+      this.isShow = value;
+    });
   }
-
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

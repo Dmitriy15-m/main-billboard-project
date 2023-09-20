@@ -17,13 +17,13 @@ $primary: #3b82f6;
   cursor: pointer;
 }
 
-.svg {
+.svg-open, .svg-close {
   margin: 0 8px;
   display: none;
 }
 
 @media (max-width: 500px) {
-  .svg {
+  .svg-open, .svg-close {
     display: block;
   }
   .categories-btn {

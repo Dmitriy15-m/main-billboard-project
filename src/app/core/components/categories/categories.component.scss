@@ -5,11 +5,11 @@ $primary: #3b82f6;
 $light-forms-border: #cbd5e1;
 
 .modal {
-  // border: 1px solid red;
   position: absolute;
+  top: 136px;
   right: 0;
   left: 0;
-  height: 1300px;
+  bottom: 0;
   background-color: rgb(128, 128, 128, 0.7);
 }
 
