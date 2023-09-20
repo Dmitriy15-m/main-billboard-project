@@ -1,64 +1,11 @@
-$dark: #1e293b;
-$primary: #3b82f6;
-$light-forms-border: #cbd5e1;
-$white: #ffffff;
-$secondary-text: #64748b;
-
 .all-categories-and-price-block {
   margin-right: 25px;
-  border: 1px solid;
+
   &__title {
-    margin: 9px 0 12px 0;
+    margin: 14px 0 12px 0;
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
   }
-  &__item {
-    margin-bottom: 8px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    color: $primary;
-    cursor: pointer;
-  }
 }
 
-.price-component {
-  font-family: "Inter", sans-serif;
-
-  &__title {
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-  }
-
-  &__inputs {
-    input {
-      padding-left: 12px;
-      width: 149px;
-      height: 40px;
-      border: 1px solid $light-forms-border;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input:focus {
-      outline: none;
-    }
-  }
-
-  &__btn {
-    width: 306px;
-    height: 48px;
-    margin-top: 24px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    border-radius: 4px;
-    border: none;
-    background-color: $primary;
-    color: $white;
-    cursor: pointer;
-  }
-}

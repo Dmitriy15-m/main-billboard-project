@@ -31,7 +31,7 @@ import { SelectedCategoryComponent } from './core/components/categories/componen
     SelectedCategoryTitleComponent,
     SelectedSubCategoriesComponent,
     SubCategoryComponent,
-    SelectedCategoryComponent
+    SelectedCategoryComponent,
   ],
   imports: [
     BrowserModule,
