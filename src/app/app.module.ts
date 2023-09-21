@@ -17,6 +17,7 @@ import { SelectedSubCategoriesComponent } from './core/components/categories/com
 import { SubCategoryComponent } from './core/components/categories/components/selected-category/components/selected-sub-categories/components/sub-category/sub-category.component';
 import { CategoriesComponent } from './core/components/categories/categories.component';
 import { SelectedCategoryComponent } from './core/components/categories/components/selected-category/selected-category.component';
+import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { SelectedCategoryComponent } from './core/components/categories/componen
     ReactiveFormsModule,
     AuthorizationModule,
     CategoryItemComponent,
+    BreadcrumbsComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

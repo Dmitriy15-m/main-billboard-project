@@ -2,25 +2,3 @@ header {
   border-bottom: 1px solid #e2e8f0;
 }
 
-
-@media (max-width: 1235px) {
-  header {
-    padding-bottom: 15px;
-  }
-  .header-search__inner {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 500px) {
-  .header-search__title {
-    font-size: 24px;
-  }
-  .header-search__categories-icon {
-    margin: 0 15px;
-    display: block;
-  }
-  .header-search__categories-btn {
-    display: none;
-  }
-}
