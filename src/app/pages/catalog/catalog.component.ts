@@ -28,11 +28,6 @@ export class CatalogComponent implements OnInit {
     this.itemList$ = this.catalogService
       .getData()
       .pipe(tap(() => (this.isLoading = false)));
-
-     this.catalogService.checkApi().subscribe(value => {
-      console.log(value);
-
-     })
   }
 
 

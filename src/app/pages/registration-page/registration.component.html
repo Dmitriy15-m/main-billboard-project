@@ -21,20 +21,35 @@
       </svg>
     </div>
     <input
+      [ngClass]="{
+        err:
+          myForm.controls['phone'].invalid && myForm.controls['phone'].touched
+      }"
       formControlName="phone"
       class="registration-block__name"
       placeholder="номер телефона"
       type="text"
     />
     <input
+      [ngClass]="{
+        err:
+          myForm.controls['password'].invalid &&
+          myForm.controls['password'].touched
+      }"
       formControlName="password"
       class="registration-block__pass"
       placeholder="пароль"
       type="text"
     />
 
-    <p routerLink="/auth-page" class="registration-block__link">Уже зарегистрированы?</p>
-    <button [ngClass]="{'disabled': myForm.invalid}"  class="registration-block__btn" type="submit">
+    <p routerLink="/auth-page" class="registration-block__link">
+      Уже зарегистрированы?
+    </p>
+    <button
+      [disabled]="myForm.invalid"
+      class="registration-block__btn"
+      type="submit"
+    >
       Зарегистрироваться
     </button>
   </form>

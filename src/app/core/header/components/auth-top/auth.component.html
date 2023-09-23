@@ -3,7 +3,7 @@
     <div class="header-auth__inner">
       <div class="header-auth__row">
         <app-authorization></app-authorization>
-        <a *ngIf="true" class="header-auth__new-ad" routerLink='new-ad'>
+        <a *ngIf="isLogin" class="header-auth__new-ad" routerLink="new-ad">
           <span>Новое объявление </span>
           <svg
             width="20"

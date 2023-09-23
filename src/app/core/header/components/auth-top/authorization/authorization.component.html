@@ -1,4 +1,4 @@
 <div class="auth">
-  <app-unauthorized *ngIf="true"></app-unauthorized>
-  <app-authorized *ngIf="true"></app-authorized>
+  <app-unauthorized *ngIf="!isLogin"></app-unauthorized>
+  <app-authorized *ngIf="isLogin" [isLogin]="isLogin"></app-authorized>
 </div>

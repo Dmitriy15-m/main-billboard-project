@@ -1,5 +1,101 @@
+$dark: #1e293b;
+$white: #ffffff;
+$black: #1e293b;
+$primary: #3b82f6;
+$light-forms-border: #cbd5e1;
+$secondary-text: #64748b;
+$error: #ef4444;
+
 .auth-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
+
+.auth-block {
+  display: flex;
+  flex-direction: column;
+  width: 416px;
+  height: 352px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  border-radius: 4px;
+
+  &__row-auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 368px;
+    height: 48px;
+    margin: 24px;
+    p {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+    svg {
+      cursor: pointer;
+    }
+  }
+  &__column-phone {
+    margin: 0 24px 24px 24px;
+  }
+
+  &__column-pass {
+    margin: 0 24px 0px 24px;
+  }
+
+  &__registration-link{
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  &__phone-err,
+  &__pass-err {
+    color: $error;
+  }
+
+  &__btn {
+    width: 127px;
+    height: 48px;
+    margin: 24px auto;
+    padding: 12px 40px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $white;
+    background-color: $primary;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__phone,
+  &__pass {
+    width: 368px;
+    height: 48px;
+    padding: 0 12px;
+    border: 1px solid $light-forms-border;
+    border-radius: 4px;
+    cursor: pointer;
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.err {
+ border: 1px solid red;
+}
+
+
+
+

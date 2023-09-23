@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
@@ -7,19 +7,23 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss'],
 })
-export class RegistrationComponent {
+export class RegistrationComponent implements OnInit {
   constructor(private auth: AuthService) {}
 
-  myForm: FormGroup = new FormGroup({
-    phone: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^[\d\+][\d\(\)\ -]{4,14}\d$/),
-    ]),
-    password: new FormControl('', [Validators.required]),
-  });
+  myForm!: FormGroup;
 
   submitForm() {
     this.auth.signUp(this.myForm.value);
     this.myForm.reset();
+  }
+
+  ngOnInit(): void {
+    this.myForm = new FormGroup({
+      phone: new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^[\d\+][\d\(\)\ -]{4,14}\d$/),
+      ]),
+      password: new FormControl('', [Validators.required]),
+    });
   }
 }

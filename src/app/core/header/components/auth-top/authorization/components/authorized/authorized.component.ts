@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ItemsCardService } from 'src/app/services/items-card.service';
+import { Component, Input } from '@angular/core';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-authorized',
@@ -7,6 +7,15 @@ import { ItemsCardService } from 'src/app/services/items-card.service';
   styleUrls: ['./authorized.component.scss'],
 })
 export class AuthorizedComponent {
-  constructor() {}
+  constructor(private authService: AuthService) {}
+  @Input() isLogin!: boolean;
+  aside: boolean = false;
 
+  logOut() {
+    this.authService.logOut(this.isLogin);
+  }
+
+  showAside() {
+    this.aside = !this.aside;
+  }
 }

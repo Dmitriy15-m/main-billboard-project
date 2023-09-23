@@ -53,7 +53,7 @@ $secondary-text: #64748b;
   }
 
   &__btn {
-    width: 244px;
+    // width: 244px;
     height: 48px;
     margin: 24px auto;
     padding: 12px 40px;
@@ -92,9 +92,8 @@ $secondary-text: #64748b;
     }
   }
 
-  .disabled {
-    opacity: 0.5;
+  .err {
+    border: 1px solid red;
   }
-
 
 }
