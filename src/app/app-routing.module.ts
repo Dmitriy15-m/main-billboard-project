@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './shared/error/error.component';
-import { CategoriesComponent } from './core/components/categories/categories.component';
+import { CategoriesComponent } from './core/dropdown-categories/categories.component';
 
 const routes: Routes = [
   {
@@ -36,6 +36,13 @@ const routes: Routes = [
       import('./pages/auth-page/auth-page.module').then(
         (m) => m.AuthPageModule
       ),
+  },
+  {
+    path: 'registration-page',
+    title: 'Регистрация',
+    loadChildren: () => import('./pages/registration-page/registration-page.module').then(
+      m => m.RegistrationPageModule
+    )
   },
   {
     path: 'new-ad',

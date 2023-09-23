@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriesService } from '../../categories-service/categories.service';
+import { CategoriesService } from '../../service/categories.service';
 
 @Component({
   selector: 'app-categories-block',

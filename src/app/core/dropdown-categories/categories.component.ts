@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ModalService } from 'src/app/services/modal-service/modal.service';
-import { CategoriesService } from './categories-service/categories.service';
+import { CategoriesService } from './service/categories.service';
 
 @Component({
   selector: 'app-categories',

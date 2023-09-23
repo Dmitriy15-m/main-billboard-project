@@ -12,7 +12,7 @@ export class ItemsCardService {
 
   getData(): Observable<0 | IItemsList> {
     return this.http.get<IItemsList>('../assets/data/items.json').pipe(
-      delay(2000),
+      delay(1000),
       catchError((err: HttpErrorResponse) => {
         return timer(2000).pipe(
           tap(() => {
@@ -21,5 +21,9 @@ export class ItemsCardService {
         );
       })
     );
+  }
+
+  checkApi(): Observable<any>{
+   return this.http.get<any>('http://194.87.237.48:5000/Categories');
   }
 }

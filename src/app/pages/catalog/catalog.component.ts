@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, tap } from 'rxjs';
 import { IItemsList } from 'src/app/models/item-card';
+import { ItemsCardService } from 'src/app/services/items-card.service';
+import { ModalService } from 'src/app/services/modal-service/modal.service';
 
 @Component({
   selector: 'app-catalog',
@@ -8,100 +11,29 @@ import { IItemsList } from 'src/app/models/item-card';
   styleUrls: ['./catalog.component.scss'],
 })
 export class CatalogComponent implements OnInit {
-  constructor(private activateRoute: ActivatedRoute) {}
+  constructor(
+    private activateRoute: ActivatedRoute,
+    private catalogService: ItemsCardService,
+  ) {}
 
   id = undefined;
+  isLoading = true;
+  itemList$!: Observable<0 | IItemsList>;
 
-  itemList: IItemsList = {
-    'main-page': [
-      {
-        img: '../../../assets/img/main-page/banji.png',
-        title: 'Тарзанка',
-        price: '2 700₽',
-        location: 'Севастополь, Фиолент 2Б',
-        visitTime: 'Сегодня 15:43',
-      },
-      {
-        img: '../../../assets/img/main-page/popugay.png',
-        title: 'Попугай Жако',
-        price: '9 700₽',
-        location: 'Ялта, Набережная 6',
-        visitTime: 'Вчера 10:45',
-      },
-      {
-        img: '../../../assets/img/main-page/dom.png',
-        title: 'Дом в центре',
-        price: '9 700 000₽',
-        location: 'Гусь-Хрустальный, Гагарина 15',
-        visitTime: 'Сегодня 11:05',
-      },
-      {
-        img: '../../../assets/img/main-page/pocos.png',
-        title: 'Покос травы',
-        price: '500₽',
-        location: 'Севастополь, Острякова 3',
-        visitTime: 'Вчера 09:45',
-      },
-      {
-        img: '../../../assets/img/main-page/remont.png',
-        title: 'Ремонт под ключ',
-        price: '1₽',
-        location: 'Москва, Курская 19',
-        visitTime: 'Вчера 15:45',
-      },
-      {
-        img: '../../../assets/img/main-page/plavanie.png',
-        title: 'Уроки плавания',
-        price: '950₽',
-        location: 'Санкт-Петербург, Сенявина 193',
-        visitTime: 'Вчера 12:21',
-      },
-      {
-        img: '../../../assets/img/main-page/3310.png',
-        title: 'Nokia 3310',
-        price: '6400₽',
-        location: 'Мурманск, Халявная 14',
-        visitTime: 'Сегодня 13:35',
-      },
-      {
-        img: '../../../assets/img/main-page/porosyata.png',
-        title: 'Домашние поросята',
-        price: '1₽',
-        location: 'пос. Фруктовое, Колхозная 22',
-        visitTime: 'Вчера 09:45',
-      },
-      {
-        img: '../../../assets/img/main-page/minivan.png',
-        title: 'Грузовой внедорожник',
-        price: '655 700₽',
-        location: 'Москва, Инженерная 165',
-        visitTime: 'Вчера 12:45',
-      },
-      {
-        img: '../../../assets/img/main-page/микроскоп.png',
-        title: 'Микроскоп',
-        price: '9 999₽',
-        location: 'пгт. Научный, Научная 5А',
-        visitTime: 'Сегодня 09:01',
-      },
-      {
-        img: '../../../assets/img/main-page/raketka.png',
-        title: 'Теннисная ракетка',
-        price: '17 200₽',
-        location: 'Сочи, Спортивный-стадион 123',
-        visitTime: 'Сегодня 23:05',
-      },
-      {
-        img: '../../../assets/img/main-page/molotok.png',
-        title: 'Молоток стальной',
-        price: '3 900₽',
-        location: 'Феодосия, Хозяйственная 1',
-        visitTime: 'Сегодня 09:46',
-      },
-    ],
-  }; // mock data
+
 
   ngOnInit(): void {
     this.id = this.activateRoute.snapshot.params['id'];
+
+    this.itemList$ = this.catalogService
+      .getData()
+      .pipe(tap(() => (this.isLoading = false)));
+
+     this.catalogService.checkApi().subscribe(value => {
+      console.log(value);
+
+     })
   }
+
+
 }

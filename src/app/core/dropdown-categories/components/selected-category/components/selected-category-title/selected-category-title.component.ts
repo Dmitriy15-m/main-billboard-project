@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CategoriesService } from '../../../../categories-service/categories.service';
+import { CategoriesService } from '../../../../service/categories.service';
 
 @Component({
   selector: 'app-selected-category-title',

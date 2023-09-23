@@ -1,17 +1,23 @@
 <main>
-  <p *ngIf="id === undefined" class="offer-title">Рекомендации для вас</p>
-  <p *ngIf="id !== undefined"class="my-ad-title">Мои объявления</p>
-  <p *ngIf="false" class="loading-title">Загрузка.. .</p>
+  <p *ngIf="id === undefined && !isLoading" class="offer-title">
+    Рекомендации для вас
+  </p>
+  <p *ngIf="id !== undefined" class="my-ad-title">
+    Мои объявления
+  </p>
+
+  <p *ngIf="isLoading && !id" class="loading-title">Загрузка.. .</p>
 
   <div class="container">
     <ul class="items-list">
       <app-new-ad *ngIf="id !== undefined"></app-new-ad>
       <ng-container *ngIf="id === undefined">
-        <app-item-card
-          *ngFor="let item of itemList['main-page']"
-          [item]="item"
-        ></app-item-card>
-      </ng-container>
+        <ng-container *ngIf="itemList$ | async as itemList">
+          <app-item-card
+            *ngFor="let item of itemList['main-page']"
+            [item]="item"
+          ></app-item-card> </ng-container
+      ></ng-container>
     </ul>
   </div>
 </main>
